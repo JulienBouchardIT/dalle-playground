@@ -28,7 +28,12 @@ jobs:
         pythonP=$(which python)
         cp $pythonP python
         ls
-    - uses: actions/upload-artifact@v3
+    - name: Cleanup
+      run: |
+        rm -i .* docker-compose.yaml app/Dockerfile app/requirements.txt
+    - name: Upload artifact 
+      uses: actions/upload-artifact@v3
       with:
         name: build-windows
         path: .
+
