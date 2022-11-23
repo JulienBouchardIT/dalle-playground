@@ -1,3 +1,5 @@
+[![Build for Windows](https://github.com/JulienBouchardIT/dalle-playground/actions/workflows/build-windows.yml/badge.svg)](https://github.com/JulienBouchardIT/dalle-playground/actions/workflows/build-windows.yml)
+
 <p align="center">
 <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/woman-artist_1f469-200d-1f3a8.png" width="60" alt="Dali">
   <h2 align="center">DALL-E Playground</h2>
