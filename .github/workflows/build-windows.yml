@@ -22,15 +22,13 @@ jobs:
         cd app
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Debug
-      run: |
-        cd app
-        python3 -m venv .
-        ls -a
-        ls -a venv
     - name: Cleanup
       run: |
         rm -i .* docker-compose.yaml app/Dockerfile app/requirements.txt
+    - name: Package Application
+      uses: JackMcKew/pyinstaller-action-windows@main
+      with:
+        path: app
     - name: Upload artifact 
       uses: actions/upload-artifact@v3
       with:
