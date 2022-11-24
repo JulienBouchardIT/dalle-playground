@@ -25,9 +25,9 @@ jobs:
     - name: Debug
       run: |
         cd app
-        pythonP=$(which python)
-        cp $pythonP python
-        ls
+        python3 -m venv .
+        ls -a
+        ls -a venv
     - name: Cleanup
       run: |
         rm -i .* docker-compose.yaml app/Dockerfile app/requirements.txt
