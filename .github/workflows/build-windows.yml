@@ -22,9 +22,6 @@ jobs:
         cd app
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Cleanup
-      run: |
-        rm -i .* docker-compose.yaml app/Dockerfile app/requirements.txt
     - name: Package Application
       uses: JackMcKew/pyinstaller-action-windows@main
       with:
